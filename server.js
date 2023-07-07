@@ -40,3 +40,10 @@ app.post("/users", (req, res) => {
 
 });
 
+app.post("/api/auth/signup", (req, res) => {
+  signup(req, res);
+});
+app.post("/api/auth/signin", (req, res) => {
+  signin(req, res);
+});
+
