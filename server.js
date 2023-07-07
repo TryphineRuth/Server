@@ -30,5 +30,13 @@ app.post("/users", (req, res) => {
         ourData,
       });
     })
-  
+  .catch((err) => {
+      res.status(500).json({
+        success: false,
+        message: "Server error. Please try again.",
+        error: err.message,
+      });
+    });
+
+});
 
