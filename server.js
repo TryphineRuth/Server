@@ -46,4 +46,8 @@ app.post("/api/auth/signup", (req, res) => {
 app.post("/api/auth/signin", (req, res) => {
   signin(req, res);
 });
+// Server listen
+app.listen(port, () => {
+  console.log(`Server listening to port ${port}`);
+});
 
