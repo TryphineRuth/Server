@@ -20,3 +20,7 @@ mongoose
   })
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.log(err));
+// get documents
+app.post("/users", (req, res) => {
+  console.log("ourData: ", req.body);
+
