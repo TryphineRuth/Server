@@ -24,3 +24,11 @@ mongoose
 app.post("/users", (req, res) => {
   console.log("ourData: ", req.body);
 
+    User.find()
+    .then((ourData) => {
+      return res.status(200).json({
+        ourData,
+      });
+    })
+  
+
