@@ -11,3 +11,12 @@ const port = 3000
 // initialise express
 const app = express();
 app.use(express.json());
+
+//  mondodb connect
+mongoose
+  .connect("mongodb+srv://admin:Truth@cluster0.69xowuj.mongodb.net/", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("MongoDB connected"))
+  .catch((err) => console.log(err));
